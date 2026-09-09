@@ -73,9 +73,16 @@ function main() {
 
   /** @type {HTMLInputElement} */
   const nameInput = document.getElementById('name-input');
-
   /** @type {HTMLButtonElement} */
   const button = document.getElementById('download-button');
+
+  nameInput.addEventListener('keydown', event => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      button.click();
+    }
+  });
+
   button.addEventListener('click', () => {
     let nameString = nameInput.value;
 
