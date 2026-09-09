@@ -65,9 +65,14 @@ h2 {
 }
 
 footer {
+  text-align: center;
   color: var(--main-font-color);
   text-shadow: 0.1em 0.08em 1px var(--drop-shadow-color);
   font-size: 1.5em;
+}
+
+footer > p {
+  margin: 0.2em;
 }
 
 #name-input {
