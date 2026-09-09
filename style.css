@@ -10,6 +10,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--main-background-color);
+  font-family: futura;
 }
 
 body::before {
@@ -40,7 +41,20 @@ body::before {
   gap: 2em;
 }
 
-p {
+a {
+  color: var(--main-font-color);
+  /*color: rgb(88 165 232);*/
+  font-weight: bold;
+  /*text-shadow: none;*/
+  /*0.343	0.643	0.906*/
+}
+
+a:hover {
+  color: rgb(250 212 87);
+  /**0.975	0.827	0.341*/
+}
+
+h2 {
   margin: 0;
   font-family: futura;
   font-weight: bold;
@@ -48,6 +62,12 @@ p {
   text-align: center;
   color: var(--main-font-color);
   filter: drop-shadow(3px 4px 1px var(--drop-shadow-color));
+}
+
+footer {
+  color: var(--main-font-color);
+  text-shadow: 0.1em 0.08em 1px var(--drop-shadow-color);
+  font-size: 1.5em;
 }
 
 #name-input {
@@ -65,6 +85,7 @@ p {
   font-family: futura;
   font-weight: bold;
   background-color: var(--main-background-color);
+  background-color: rgb(88 165 232);
 
 
   border: 0;
