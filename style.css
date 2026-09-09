@@ -1,0 +1,86 @@
+:root {
+  --main-background-color: rgb(157 204 194);
+  --main-font-color: white;
+  --drop-shadow-color: #4c4b4b;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-background-color);
+}
+
+body::before {
+  background-image: url(bg_gb.png);
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+  opacity: 0.3;
+  animation: move-gb 10s infinite normal linear;
+}
+
+@keyframes move-gb {
+  from {
+    transform: rotate(336deg) translate(0);
+  }
+  to {
+    transform: rotate(336deg) translate(86px);
+  }
+  
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+p {
+  margin: 0;
+  font-family: futura;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  color: var(--main-font-color);
+  filter: drop-shadow(3px 4px 1px var(--drop-shadow-color));
+}
+
+#name-input {
+  font-family: futura;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 14px;
+  line-height: 2em;
+  border-width: 0;
+  filter: drop-shadow(3px 4px 1px var(--drop-shadow-color));
+}
+
+#download-button {
+  font-size: 2em;
+  font-family: futura;
+  font-weight: bold;
+  background-color: var(--main-background-color);
+
+
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  text-align: center;
+  color: var(--main-font-color);
+  text-shadow: 3px 3px 1px var(--drop-shadow-color);
+  border-radius: 10px;
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 0.6),
+    inset -2px -2px 3px rgb(0 0 0 / 0.6);
+}
+
+#download-button:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+    inset 2px 2px 3px rgb(0 0 0 / 0.6);
+}
